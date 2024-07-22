@@ -1,0 +1,143 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  /* padding-top: 50px; */
+}
+.navbar-nav a {
+  color: black;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-nav a:hover {
+  color: #fca61f;
+}
+/* .link:hover{
+    color: #6f34fe;
+  } */
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/* header {
+  background-color: lightgray;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+} */
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.products {
+  padding: 20px;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  width: calc(25% - 40px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.1);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product h3 {
+  margin: 15px 0 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.product p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.product .button {
+  padding: 10px 20px;
+  background-color: #ff4081;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.product .button:hover {
+  background-color: #e03570;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 1024px) {
+  .product {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: calc(50% - 20px);
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+    width: calc(100% - 40px);
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .product {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
